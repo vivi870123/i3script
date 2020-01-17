@@ -14,8 +14,8 @@ while getopts ":a:r:b:p:h" o; do case "${o}" in
 	*) printf "Invalid option: -%s\\n" "$OPTARG" && exit ;;
 esac done
 
-[ -z "$dotfilesrepo" ] && dotfilesrepo="https://github.com/lukesmithxyz/voidrice.git"
-[ -z "$progsfile" ] && progsfile="https://raw.githubusercontent.com/LukeSmithxyz/LARBS/master/progs.csv"
+[ -z "$dotfilesrepo" ] && dotfilesrepo="https://github.com/vivi870123/dotfile.git"
+[ -z "$progsfile" ] && progsfile="https://raw.githubusercontent.com/vivi870123/i3script/master/progs.csv"
 [ -z "$aurhelper" ] && aurhelper="yay"
 [ -z "$repobranch" ] && repobranch="master"
 
@@ -223,7 +223,7 @@ sed -i "s/^$name:\(.*\):\/bin\/.*/$name:\1:\/bin\/zsh/" /etc/passwd
 # dbus UUID must be generated for Artix runit
 dbus-uuidgen > /var/lib/dbus/machine-id
 
-# Let LARBS know the WM it's supposed to run.
+# Let the Script know the WM it's supposed to run.
 echo "$edition" > "/home/$name/.local/share/mines/wm"; chown "$name:wheel" "/home/$name/.local/share/mines/wm"
 
 # Last message! Install complete!
