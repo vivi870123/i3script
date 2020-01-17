@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+dmenu -fn 'Hack:bold:size=13' -nb '#1e1c31' -nf '#cbe3e7' -sb '#504A61' -sf '#cbe3e7' -p "$1" <&- && echo

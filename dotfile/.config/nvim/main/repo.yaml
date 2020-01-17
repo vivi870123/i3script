@@ -1,0 +1,215 @@
+# =================================
+# Startup
+# -------
+- repo: Shougo/dein.vim
+- repo: wsdjeg/dein-ui.vim
+- repo: haya14busa/dein-command.vim
+
+# =================================
+# Languages
+# -------
+- repo: neoclide/jsonc.vim
+- repo: neomutt/neomutt.vim
+- repo: vim-jp/syntax-vim-ex
+- { repo: leafgarland/typescript-vim, on_ft: [typescriptreact,typescript] }
+- { repo: peitalin/vim-jsx-typescript, on_ft: [typescriptreact]}
+
+- repo: sheerun/vim-polyglot
+  hook_add: let g:polyglot_disabled = ['vim', 'typescript]']
+  hook_source: source $VIM_PATH/main/plugins/polyglot.vim
+
+- { repo: masukomi/vim-markdown-folding, on_ft: markdown}
+- { repo: swekaj/php-foldexpr.vim, on_ft: php}
+
+- repo: adoy/vim-php-refactoring-toolbox
+  on_ft: php
+  hook_add: |
+    let g:vim_php_refactoring_use_default_mapping = 0
+    let g:vim_php_refactoring_make_setter_fluent = 2
+
+- repo: stephpy/vim-php-cs-fixer
+  hook_add: |
+    let g:php_cs_fixer_path = "~/projects/php-cs-fixer.phar"
+    let g:php_cs_fixer_rules = "@PSR2"
+
+- repo: iamcco/markdown-preview.nvim
+  on_ft: [markdown,pandoc.markdown,rmd]
+  hook_post_source: 'call mkdp#util#install()'
+  hook_source: let g:mkdp_auto_start = 1
+
+- repo: kkoomen/vim-doge # documentor
+  on_ft: [php, javascript, typescript, typescriptreact, python]
+  hook_add: let g:doge_mapping = 0
+
+- {repo: janko-m/vim-test, on_ft: ['php']}
+
+# =================================
+# Commands
+# --------
+- repo: tpope/vim-repeat
+- repo: tpope/vim-surround
+- repo: tpope/vim-abolish
+- repo: tpope/vim-commentary
+- repo: AndrewRadev/switch.vim
+
+- repo: mbbill/undotree
+  on_cmd: UndotreeToggle
+  hook_source: source $VIM_PATH/main/plugins/undotree.vim
+
+- repo: MattesGroeger/vim-bookmarks
+  on_path: .*
+  hook_source: source $VIM_PATH/main/plugins/vim-bookmarks.vim
+
+- {repo: rhysd/clever-f.vim, hook_add: let g:clever_f_fix_key_direction = 1}
+
+# =================================
+# Git
+# ----
+- { repo: jreybert/vimagit, on_cmd: [Magit, MagitOnly] }
+- { repo: hotwatermorning/auto-git-diff, on_ft: gitrebase }
+
+- repo: rhysd/committia.vim
+  on_path: COMMIT_EDITMSG
+  hook_source: let g:committia_min_window_width = 70
+
+# =================================
+# UTILS
+# -----
+- { repo: metakirby5/codi.vim, on_cmd: Codi }
+- repo: editorconfig/editorconfig-vim
+- repo: zhimsel/vim-stay
+- repo: tweekmonster/startuptime.vim
+
+# =================================
+# interface
+# ---------
+- repo: itchyny/vim-parenmatch
+- repo: lambdalisue/vim-backslash
+- { repo: haya14busa/vim-asterisk, on_map: { nv: <Plug> }}
+- { repo: haya14busa/is.vim, on_map: { nv: <Plug> }}
+- { repo: osyo-manga/vim-anzu, on_map: { nv: <Plug> }}
+- {repo: Shougo/deol.nvim, on_cmd: Deol}
+- {repo: junegunn/limelight.vim, on_cmd: Limelight}
+
+- repo: junegunn/goyo.vim
+  depends: limelight.vim
+  on_cmd: Goyo
+  hook_source: source $VIM_PATH/main/plugins/goyo.vim
+
+- repo: luochen1990/rainbow
+  on_ft: [php, python, html, css, vim, typescript, typescriptreact, javascript, javascriptreact]
+  hook_add: let g:rainbow_active=1
+
+- repo: itchyny/vim-cursorword
+  on_path: .*
+  hook_source: source $VIM_PATH/main/plugins/vim-cursorword.vim
+
+- repo: norcalli/nvim-colorizer.lua
+  if: has('nvim') && has('nvim-0.4.0')
+  on_path: .*
+  hook_source: luafile $VIM_PATH/main/plugins/colorizer.lua
+
+- repo: easymotion/vim-easymotion
+  on_map: { n: <Plug> }
+  hook_source: |
+    let g:EasyMotion_do_mapping = 0
+    let g:EasyMotion_use_upper = 1
+    let g:EasyMotion_prompt = 'Jump to → '
+    let g:EasyMotion_keys = 'fjdksweoavn'
+    let g:EasyMotion_smartcase = 1
+
+- repo: Yggdroot/indentLine
+  on_cmd: [IndentLinesToggle]
+  on_ft: [python,html,css,vim,typescript,typescriptreact,javascript,javascriptreact,vue]
+  hook_source: source $VIM_PATH/main/plugins/indentline.vim
+
+- repo: itchyny/calendar.vim
+  on_cmd: Calendar
+  hook_source: |
+    let g:calendar_google_calendar = 1
+    let g:calendar_google_task = 1
+
+- repo: vimwiki/vimwiki
+  on_map: { n: <Plug> }
+  on_cmd: [ VimwikiIndex, VimwikiUISelect ]
+  hook_add: source  $VIM_PATH/main/plugins/vimwiki.vim
+
+# =================================
+# Tabline & Bufferline
+# --------------------
+- repo: itchyny/lightline.vim
+  hook_add: source $VIM_PATH/main/plugins/lightline.vim
+
+- {repo: cocopon/lightline-hybrid.vim, depends: lightline.vim}
+- {repo: mengelbrecht/lightline-bufferline, depends: lightline.vim}
+
+
+# =================================
+# Coc.nvim
+# ----------
+- repo: neoclide/coc.nvim
+  merge: 0
+  build: yarn install --frozen-lockfile
+  hook_add: source $VIM_PATH/main/plugins/coc.vim
+
+- repo: chemzqm/todoapp.vim
+
+# =================================
+# Completion
+# ----------
+- repo: liuchengxu/vista.vim
+  hook_add: source $VIM_PATH/main/plugins/vista.vim
+
+- repo: ludovicchabant/vim-gutentags
+  if: executable('ctags')
+  on_path: .*
+  hook_add: source $VIM_PATH/main/plugins/gutentags.vim
+
+- repo: Shougo/echodoc.vim
+  on_event: CompleteDone
+  hook_source: |
+    call echodoc#enable()
+
+# =================================
+# Operators
+# ---------
+- repo: kana/vim-operator-user
+- repo: kana/vim-operator-replace
+  depends: vim-operator-user
+  on_map: { vnx: <Plug> }
+
+# =================================
+# Text Objects
+# ------------
+- repo: kana/vim-textobj-user
+- repo: machakann/vim-textobj-delimited
+- { repo: terryma/vim-expand-region, on_map: { x: <Plug> }}
+- { repo: AndrewRadev/sideways.vim, on_map: { onx: <Plug>Sideways }}
+- { repo: AndrewRadev/splitjoin.vim, on_map: { n: <Plug>Splitjoin }}
+
+- repo: AndrewRadev/dsf.vim
+  on_map: { n: <Plug>Dsf }
+  hook_add: let g:dsf_no_mappings = 1
+
+- repo: osyo-manga/vim-textobj-multiblock
+  depends: vim-textobj-user
+  on_map: { ox: <Plug> }
+  hook_add: let g:textobj_multiblock_no_default_key_mappings = 1
+
+- repo: kana/vim-textobj-function
+  depends: vim-textobj-user
+  on_map: { ox: <Plug> }
+  hook_add: let g:textobj_function_no_default_key_mappings = 1
+
+# =================================
+# Colorschemes
+# ------------
+- repo: Rigellute/shades-of-purple.vim
+- repo: rafi/awesome-vim-colorschemes
+  hook_add: source $VIM_PATH/main/plugins/colorschemes.vim
+
+# =================================
+# Icons
+# -----
+- repo: ryanoasis/vim-devicons
+  hook_add: source $VIM_PATH/main/plugins/vim-devicons.vim

@@ -1,0 +1,104 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	bat="acpi" \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -v" \
+	mkd="mkdir -pv" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ffmpeg="ffmpeg -hide_banner"
+
+# Colorize commands when possible.
+alias \
+	ls="command exa --color=always -h" \
+	lh="ls -alt=changed | head" \
+	la="ls -la" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	cat="bat"
+
+# Git shortcuts
+alias \
+	gi='git init' \
+	gl='git log' \
+	ga='git add' \
+	gaa='git add .' \
+	gs='git status' \
+	gc='git commit -m' \
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	ka="killall" \
+	trem="transmission-remote" \
+	YT="youtube-viewer" \
+	sdn="sudo shutdown -h now" \
+	sdr="sudo shutdown -r now" \
+	f="$FILE" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	p="sudo pacman" \
+	xi="sudo xbps-install" \
+	xr="sudo xbps-remove -R" \
+	xq="xbps-query"
+
+# This alias is important. It enables the `pauseallmpv` command.
+alias mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)"
+
+# Some other stuff
+alias \
+	magit="nvim -c MagitOnly" \
+	ref="shortcuts >/dev/null; source ~/.config/shortcutrc" \
+	:q="exit" \
+	j="z" \
+	c="clear" \
+	tree="tree --dirsfirst -Cha -I .git" \
+	clear-password-cache="gpgconf --reload gpg-agent" \
+	pirate-get="pirate-get -C peerflix %s --mpv"
+
+# homestead aliases
+alias \
+	hp='homestead provision' \
+	hu='homestead up' \
+	hr='homestead reload' \
+	hs='homestead suspend' \
+	hh='homestead halt' \
+	hssh='homestead ssh' 
+
+
+# laravel aliases
+alias \
+a='php artisan' \
+art='php artisan' \
+amc="php artisan make" \
+amc="php artisan make:controller" \
+ame="php artisan make:event" \
+amj="php artisan make:job" \
+amm="php artisan make:migration" \
+amr="php artisan make:request" \
+ams="php artisan make:seeder" \
+amt="php artisan make:test" \
+aia="php artisan infyom:api" \
+aias="php artisan infyom:api_scaffold" \
+aim="php artisan infyom:model" \
+aiM="php artisan infyom:migration" \
+aip="php artisan infyom:publish" \
+air="php artisan infyom:repository" \
+aiR="php artisan infyom:rollback" \
+ais="php artisan infyom:scaffold" \
+apic="php artisan infyom.api:controller" \
+apir="php artisan infyom.api:request" \
+apit="php artisan infyom.api:tests" \
+isc="php artisan infyom.scaffold:controller" \
+isr="php artisan infyom.scaffold:request" \
+isv="php artisan infyom.scaffold:views" \
+t="./vendor/bin/phpunit"
+
+# Zsh
+alias zs="source ~/.zshrc"

@@ -1,0 +1,13 @@
+let g:undotree_DiffAutoOpen = v:false
+let g:undotree_DiffpanelHeight = 10
+let g:undotree_DiffCommand = 'diff'
+let g:undotree_HelpLine = v:false
+let g:undotree_HighlightChangedText = 1
+let g:undotree_HighlightSyntaxAdd = 'DiffAdd'
+let g:undotree_HighlightSyntaxChange = 'DiffChange'
+let g:undotree_HighlightSyntaxDel = 'DiffDelete'
+let g:undotree_RelativeTimestamp = 1
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_SplitWidth = 35
+let g:undotree_TreeNodeShape = '*'
+let g:undotree_WindowLayout= 3
