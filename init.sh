@@ -164,7 +164,6 @@ installpkg dialog || error "Are you sure you're running this as the root user an
 
 # Welcome user and pick dotfiles.
 welcomemsg || error "User exited."
-selectdotfiles || error "User exited."
 
 # Get and verify username and password.
 getuserandpass || error "User exited."
@@ -226,8 +225,7 @@ systembeepoff
 
 #create Screenshots folder
 mkdir -p /home/$name/Pictures/Screenshots
-chown -R "$name":wheel Screenshots
-
+chown -R "$name":wheel /home/$name/Pictures/Screenshots
 
 # Make zsh the default shell for the user.
 sed -i "s/^$name:\(.*\):\/bin\/.*/$name:\1:\/bin\/zsh/" /etc/passwd
