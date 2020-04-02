@@ -7,7 +7,7 @@
 I,libXft-devel,"is required for the compilation of some programs."
 I,gcr-devel,"is required for the compilation of some programs."
 I,fontconfig-devel,"is required for the compilation of some programs."
-A,ttf-hack-powerline-git, "Hack font for powerline"
+A,nerd-fonts-source-code-pro,"Nerd Fonts"
 A,nerd-fonts-inconsolata, "Inconsolata nerd font"
 ,ranger, "an extensive terminal file manager that everyone likes."
 ,tree,"lists directory contents like trees. Used by vifm."
