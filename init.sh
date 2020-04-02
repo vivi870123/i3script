@@ -188,9 +188,6 @@ installpkg base-devel
 installpkg git
 installpkg ntp
 
-dialog --title "Installation" --infobox "Synchronizing system time to ensure successful and secure installation of software..." 4 70
-ntp 0.uk.pool.ntp.org >/dev/null 2>&1
-
 [ "$distro" = arch ] && { \
 	[ -f /etc/sudoers.pacnew ] && cp /etc/sudoers.pacnew /etc/sudoers # Just in case
 
