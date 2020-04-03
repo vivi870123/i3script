@@ -2,8 +2,9 @@
 
 . "$(dirname "$BASH_SOURCE")/../utils.sh"
 
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 nvm install node
-nvm install --lts --latest-npm
 
 title "Installing global packages"
 
@@ -26,4 +27,4 @@ for package in "${packages[@]}"; do
   fi
 done
 
-progress "Finished"
+progress "Finished!"

@@ -17,7 +17,7 @@ mkdir /media/mydisk
 sudo mount /dev/sda4 /media/mydisk
 
 # mount partition on boot
-$ su -
+su -
 echo "UUID=$(lsblk -no UUID /dev/sda4) /media/mydisk $(lsblk -no FSTYPE /dev/sda4) defaults,noatime 0 2" >> /etc/fstab
 mount -a
 
