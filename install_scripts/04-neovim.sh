@@ -16,10 +16,3 @@ if test ! "$(pip3 --version 2>/dev/null)"; then
 else
   pip3 install --user neovim
 fi
-
-if test ! "$(npm --version 2>/dev/null)"; then
-	warn "Command npm not found!"
-else
-  npm install -g neovim
-fi
-

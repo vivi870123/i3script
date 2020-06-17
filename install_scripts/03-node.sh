@@ -15,6 +15,8 @@ packages=(
 	bash-language-server
 	caniuse-cli
 	fx
+	write-good
+	alex
 )
 
 for package in "${packages[@]}"; do
