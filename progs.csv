@@ -96,5 +96,7 @@ A,redshift,""
 A,ttf-nerd-fonts-hack-complete-git, ""
 A,qtwebflix-git, ""
 A,plata-theme, "Gtk+ theme based on Material Design Refresh"
+A,trash-cli,"Command line trashcan (recycle bin) interface"
+
 
 
