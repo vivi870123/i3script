@@ -1,0 +1,8 @@
+pip install yapf
+pip install --user yamllint
+pip install vim-vint
+npm install alex --global
+npm install -g sql-lint
+
+pacman -S shellcheck
+

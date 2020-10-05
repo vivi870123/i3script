@@ -25,6 +25,11 @@ remove=(
 	xterm
 	deluge
 	manjaro-hello
+	ranger
+	redshift
+	bmenu
+	manjaro-ranger-settings
+	ranger
 )
 
 # title "Installing dev packages..."
@@ -55,3 +60,5 @@ done
 
 title "Clean the nonneeded packages..."
 yay -Yc
+
+
