@@ -3,7 +3,7 @@
 . "$(dirname "$BASH_SOURCE")/../utils.sh"
 
 title "Configuring timezone"
-timedatectl set-local-rtc 1 --adjust-system-clock
+timedatectl set-timezone Europe/London
 progress "Done!"
 
 title "Fixing max watches"
