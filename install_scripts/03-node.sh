@@ -9,14 +9,16 @@ nvm install node
 title "Installing global packages"
 
 packages=(
+	neovim
 	eslint
 	create-react-app
 	create-react-native-app
-	bash-language-server
 	caniuse-cli
 	fx
 	write-good
 	alex
+	yaml-language-server
+	bash-language-server
 )
 
 for package in "${packages[@]}"; do

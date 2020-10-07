@@ -13,7 +13,7 @@ while getopts ":a:r:b:p:h" o; do case "${o}" in
 	*) printf "Invalid option: -%s\\n" "$OPTARG" && exit ;;
 esac done
 
-[ -z "$dotfilesrepo" ]	&& dotfilesrepo="https://github.com/vivi870123/mines.git"
+[ -z "$dotfilesrepo" ]	&& dotfilesrepo="https://github.com/vivi870123/manjaro-dotfile.git"
 [ -z "$progsfile" ]	&& progsfile="https://raw.githubusercontent.com/vivi870123/i3script/master/progs.csv"
 [ -z "$aurhelper" ]	&& aurhelper="yay"
 [ -z "$repobranch" ]	&& repobranch="master"
