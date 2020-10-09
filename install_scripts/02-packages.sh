@@ -26,7 +26,6 @@ remove=(
 	deluge
 	manjaro-hello
 	ranger
-	redshift
 	bmenu
 	manjaro-ranger-settings
 	ranger

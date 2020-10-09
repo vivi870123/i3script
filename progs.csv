@@ -13,7 +13,6 @@ A,nerd-fonts-inconsolata, "Inconsolata nerd font"
 ,arandr,"is a UI for screen adjustment."
 ,qalc,"is used for a dropdown calculator."
 ,calcurse,"is a lightweight terminal-based calendar."
-,picom,"is for transparency and removing screen-tearing."
 ,dosfstools,"allows your computer to access dos-like filesystems."
 ,libnotify,"allows desktop notifications."
 ,dunst,"is a suckless notification system."
@@ -99,6 +98,8 @@ A,trash-cli,"Command line trashcan (recycle bin) interface"
 A,lazygit, "command line git interface"
 A,lua-language-server-git,"Lua Language Server"
 A,lesspipe, "an input filter for the pager less"
+A,picom-ibhagwan-git "with rounded corners"
+
 
 # roboto mono nerd font
 # hack font
