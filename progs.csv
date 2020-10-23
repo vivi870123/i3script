@@ -59,41 +59,38 @@ A,ttf-symbola,"provides unicode and emoji symbols."
 ,urlscan,"parses URLs in the terminal allowing keyboard-based selection."
 ,polybar,"polybar extension for top bar."
 A,tremc ,"cross interface for transmission daemon."
-,python-geoip,"Guess which country peers come from"
-A,python-xerox,"Copy magnet links to the system clipboard"
 ,transmission-cli,"BitTorrent client (CLI tools - daemon &  web client)"
 ,thefuck,"corrects terminal mistakes"
 ,yarn,"npm alternative"
 ,ripgrep,"fuzzy sercher"
-,python,"python 3"
-,pyton2,"python 2"
-,pyton-pip,"pip for python3"
-,pyton2-pip,"pip for python2"
-A,python-neovim-git,"ptyhon3 client to neovim"
 ,cmus,"terminal music player"
 ,jq,"command-line JSON processor"
 ,neofetch,"display useful system information"
 A,vtop,"replacement for htop"
 ,exa,"replacement for 'ls'"
-A,antigen,"zsh framework"
 ,composer,"dependency manager for PHP"
-,bat,"cat clone with syntax highlighting and git integration"
 ,slock,"allows you to lock your computer, and quickly unlock with your password."
 ,paper-icon-theme-git,"icon theme"
 A,plata-theme, "Gtk+ theme based on Material Design Refresh"
 ,nvm,"node version manager"
-A,python-pdftotext,""
 A,odttotext,""
 A,docxtotext,""
 A,antiword,""
 A,dumptorrent,""
 A,ttf-nerd-fonts-hack-complete-git, ""
-A,trash-cli,"Command line trashcan (recycle bin) interface"
-A,lazygit, "command line git interface"
 A,lua-language-server-git,"Lua Language Server"
-A,lesspipe, "an input filter for the pager less"
 A,picom-ibhagwan-git, "with rounded corners"
 A,typora,""
 ,alacritty,"terminal"
 
 
+
+/* ,python,"python 3" */
+/* ,pyton2,"python 2" */
+/* ,pyton-pip,"pip for python3" */
+/* ,pyton2-pip,"pip for python2" */
+/* A,python-pdftotext,"" */
+/* A,python-neovim-git,"ptyhon3 client to neovim" */
+
+/* ,python-geoip,"Guess which country peers come from" */
+/* A,python-xerox,"Copy magnet links to the system clipboard" */

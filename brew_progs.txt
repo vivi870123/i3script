@@ -1,0 +1,8 @@
+php
+docker
+docker-compose
+python3
+trash-cli
+lesspipe        - an input filter for the pager less
+A,lazygit, "command line git interface"
+,bat,"cat clone with syntax highlighting and git integration"
